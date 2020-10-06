@@ -16,9 +16,9 @@ from torch.utils.data import DataLoader
 from torchvision import datasets
 from torchvision import transforms
 
-from project1.ConvNetMods import alexnetmod, vgg16mod, resnetmod
-from project1.Dataset import TransformedMNIST
-from project1.FeatureExtractor import FeatureExtractor
+from ConvNetMods import alexnetmod, vgg16mod, resnetmod
+from Dataset import TransformedMNIST
+from FeatureExtractor import FeatureExtractor
 
 if torch.cuda.is_available():
     pass
@@ -120,7 +120,7 @@ def scattering_transform_mnist(save_to_disk=True, train=True):
 def get_dataset_dir(use_default=True):
     if use_default:
         print("reading from local directory")
-        dataset_dir = "/home/sutd/Documents/Workspace/MATH6380P/project1/"
+        dataset_dir = "C:/Users/tuana/Documents/GitHub/MATH6380P/MATH6380P/project1/"
     else:
         print("not reading from local directory, probably need to save to new directory")
         dataset_dir = "~/math6380/project1/"
